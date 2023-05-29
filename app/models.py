@@ -14,3 +14,6 @@ class User(models.Model):
         (NONE_OF_YOUR_BS, "--")
     ]
     gender = models.CharField(max_length=2, choices=CHOICES, default=NONE_OF_YOUR_BS)
+    
+    def __str__(self) -> str:
+        return self.username

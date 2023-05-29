@@ -3,7 +3,19 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <main>
-        <h3>Hello setup</h3>
-    </main>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>List of users [READ]</h3>
+                <hr>
+                <ul class="list-group list-group-flush list-group-numbered">
+                    {% for user in users_list %}
+                        <li class="list-group-item">
+                            <a class="link-info list-group-item-action" href="{% url 'details-page' user.id %}">{{ user.username }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}

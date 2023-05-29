@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>LOCATION</th>
+            <th>GENDER</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in u_list %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.location }}</td>
+                <td>{{ user.gender }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
