@@ -1,9 +1,14 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
-from app.libs.custom_forms import AddUserForm
+from django.views.generic.edit import CreateView, UpdateView
+from app.libs.custom_forms import AddUserForm, UpdateUserForm
 
 from app.models import User
 
+
+class UpdateUser(UpdateView):
+    model = User
+    template_name = "app/update_user.html"
+    form_class = UpdateUserForm
 
 
 class CreateUser(CreateView):
