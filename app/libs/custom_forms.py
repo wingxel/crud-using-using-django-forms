@@ -6,7 +6,7 @@ from app.models import User
 class Util:
     @staticmethod
     def update_attrs(visible_field) -> None:
-        visible_field.field.widget.attrs["class"] = "form-control"
+        visible_field.field.widget.attrs["class"] = "form-control db-form"
         visible_field.field.widget.attrs["placeholder"] = f"Enter {visible_field.label.lower()}"
 
 

@@ -1,7 +1,7 @@
 <nav>
-    <div class="navbar navbar-expand-lg navbar-light">
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'index-page' %}">WINGXEL</a>
+            <a class="navbar-brand " href="https://play.google.com/store/apps/developer?id=wingxel">@wingxel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" arial-controls="navbarSupportedContent"  data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -13,8 +13,16 @@
                 </ul>
                 <form class="d-flex" method="GET" action="/search">
                     <input type="search" class="form-control me-2" value="{{ s }}" name="s" placeholder="Search" aria-label="Search" required>
-                    <input type="submit" class="btn btn-outline-success" value="Submit">
+                    <input type="submit" class="btn btn-secondary" value="Search">
                 </form>
+                <ul class="navbar-nav mb-2 ms-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wingxel.com/">WEBSITE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/wingxel">GitHub</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
