@@ -1,0 +1,9 @@
+{% extends "app/base/base.html" %}
+
+{% block body %}
+
+    {% include "app/includes/nav.html" %}
+
+    {% include "includes/error_page.html" with error_header="Error 400 - Bad Request" error_message="Provided input is not valid!" %}
+
+{% endblock %}

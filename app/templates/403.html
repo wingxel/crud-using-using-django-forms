@@ -1,0 +1,11 @@
+{% extends "app/base/base.html" %}
+
+{% block title %}Error 500{% endblock %}
+
+{% block body %}
+
+    {% include "app/includes/nav.html" %}
+
+    {% include "includes/error_page.html" with error_header="Error 403 - Forbidden" error_message="Please check the submitted values!" exception=error %}
+
+{% endblock %}

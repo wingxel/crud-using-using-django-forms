@@ -4,7 +4,8 @@ from app.libs.custom_forms import AddUserForm, UpdateUserForm
 from django.urls import reverse_lazy
 from django.views import View
 from django.core.handlers.wsgi import WSGIRequest
-from django.http import HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse
+from django.core.exceptions import BadRequest
 from django.db.models import Q
 from django.shortcuts import render
 
@@ -53,4 +54,20 @@ class Search(View):
                 "results": results,
                 "s": query_term
             })
-        return HttpResponseBadRequest("Bad Request")
+        raise BadRequest("Bad Request")
+
+
+def error_404_view(request: WSGIRequest, exception: Exception) -> HttpResponse:
+    return render(request, "404.html")
+
+
+def error_400_view(request: WSGIRequest, exception: Exception) -> HttpResponse:
+    return render(request, "400.html")
+
+
+def error_403_view(request: WSGIRequest, exception: Exception) -> HttpResponse:
+    return render(request, "403.html")
+
+
+def error_500_view(request: WSGIRequest) -> HttpResponse:
+    return render(request, "500.html")

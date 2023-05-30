@@ -1,0 +1,9 @@
+{% extends "app/base/base.html" %}
+
+{% block body %}
+
+    {% include "app/includes/nav.html" %}
+
+    {% include "includes/error_page.html" with error_header="Error 404 - Not Found" error_message="The url requested was not found on this server!" exception=error %}
+
+{% endblock %}

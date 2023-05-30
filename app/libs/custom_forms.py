@@ -1,4 +1,3 @@
-from dataclasses import fields
 from django.forms import ModelForm
 from app.models import User
 
