@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 class User(models.Model):
     username = models.CharField(max_length=200, unique=True)
@@ -17,3 +17,7 @@ class User(models.Model):
     
     def __str__(self) -> str:
         return self.username
+    
+    def get_absolute_url(self):
+        return reverse("details-page", kwargs={"pk": self.pk})
+    

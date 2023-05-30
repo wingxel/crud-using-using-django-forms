@@ -1,6 +1,14 @@
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView
+from app.libs.custom_forms import AddUserForm
 
 from app.models import User
+
+
+
+class CreateUser(CreateView):
+    template_name = "app/add_user.html"
+    form_class = AddUserForm
 
 
 class UsersList(ListView):

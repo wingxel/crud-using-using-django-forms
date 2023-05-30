@@ -1,0 +1,17 @@
+{% extends "app/base/base.html" %}
+
+{% load static %}
+
+{% block title %}Add User{% endblock %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'app/css/app.css' %}">
+{% endblock %}
+
+{% block body %}
+
+    {% include "app/includes/nav.html" %}
+
+    {% include "app/includes/skelton_form.html" with action_name="CREATE" form_e=form %}
+
+{% endblock %}
