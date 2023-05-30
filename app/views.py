@@ -8,7 +8,7 @@ class UsersList(ListView):
     context_object_name = "users_list"
     
     def get_queryset(self):
-        return User.objects.all()
+        return User.objects.values("username", "id")
 
 
 class UserDetails(DetailView):
