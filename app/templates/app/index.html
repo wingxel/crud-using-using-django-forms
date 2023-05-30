@@ -9,15 +9,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 mx-auto">
-                <h3>List of users [READ]</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>List of users [READ]</th>
+                            <th><a href="{% url 'add-user' %}">CREATE</a></th>
+                        </tr>
+                    </thead>
+                </table>
                 <hr>
-                <ul class="list-group list-group-flush list-group-numbered">
-                    {% for user in users_list %}
-                        <li class="list-group-item">
-                            <a class="link-info list-group-item-action" href="{% url 'details-page' user.id %}">{{ user.username }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                {% include "app/includes/table.html" with u_list=users_list %}
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <nav>
     <div class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">WINGXEL</a>
+            <a class="navbar-brand" href="{% url 'index-page' %}">WINGXEL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" arial-controls="navbarSupportedContent"  data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -10,17 +10,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'index-page' %}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add-user' %}">Create</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Update</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Delete</a>
-                    </li>
                 </ul>
-                <form class="d-flex mx-auto" method="GET">
+                <form class="d-flex" method="GET">
                     <input type="search" class="form-control me-2" name="s" placeholder="Search" aria-label="Search" required>
                     <input type="submit" class="btn btn-outline-success" value="Submit">
                 </form>

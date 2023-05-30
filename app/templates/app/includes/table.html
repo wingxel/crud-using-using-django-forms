@@ -3,19 +3,22 @@
         <tr>
             <th>ID</th>
             <th>USERNAME</th>
-            <th>EMAIL</th>
-            <th>LOCATION</th>
-            <th>GENDER</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
         </tr>
     </thead>
     <tbody>
         {% for user in u_list %}
             <tr>
                 <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.location }}</td>
-                <td>{{ user.gender }}</td>
+                <td><a href="{% url 'details-page' user.id %}">{{ user.username }}</a></td>
+                <td><a href="{% url 'update-user' user.id %}">Edit</a></td>
+                <td>
+                    <form action="{% url 'delete-user' user.id %}" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-secondary" type="submit">DELETE</button>
+                    </form>
+                </td>
             </tr>
         {% endfor %}
     </tbody>
