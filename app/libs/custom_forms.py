@@ -17,7 +17,7 @@ class AddUserForm(ModelForm):
     
     class Meta:
         model = User
-        fields = ["username", "email", "location", "gender"]
+        fields = ["username", "email", "location", "gender", "profile"]
 
 
 class UpdateUserForm(ModelForm):
@@ -28,4 +28,4 @@ class UpdateUserForm(ModelForm):
     
     class Meta:
         model = User
-        fields = ["username", "email", "location"]
+        fields = ["username", "email", "location", "profile"]
