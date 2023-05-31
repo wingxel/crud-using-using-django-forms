@@ -9,7 +9,17 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 mx-auto">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>{{ user.profile }}</h6>
+                        </div>
+                        <div class="card-body">
+                            <img class="img-thumbnail" src="{{ user.profile.url }}" alt="User profile">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
                     <h3>{{ user.username }} Info [READ]</h3>
                     <hr>
                     <table class="table table-success">
