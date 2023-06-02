@@ -1,4 +1,4 @@
-# CRUD operation using django, jquery and html
+# CRUD operation using django generated forms
 
 Install requirements
 
